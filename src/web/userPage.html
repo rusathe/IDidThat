@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>User Homepage</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="register.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+    <!-- Top Navigation Bar Begin -->
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="buttondesign" onclick="validateregistration('checkin');"><a class="checkin">Checkin!</a></li>
+                <li  class="buttondesign" role="presentation" onclick="validateregistration('userpage');">
+                    <a  class="style1">User page</a>
+                </li> <!-- Goes to login if not logged in else goes to userHomePage -->
+            </ul>
+        </nav>
+        <h3 class="text-muted brandname"><a href="index.html" class="style1">I Did That</a></h3>
+    </div>
+    <!-- Top Navigation Bar End -->
+    <hr class="dist">
+    <!-- Where you've been begin-->
+    <div class="jumbotron">
+        <h1>Recently Visited</h1>
+        <!--  Populate checkedin places here -->
+        <ul>
+            <li>Lately visited</li><input type="text" id="place1"  readonly>
+            <li>A little old</li><input type="text" id="place2"  readonly>
+            <li>It's been sometime you were here</li><input type="text" id="place3" readonly>
+        </ul>
+        <script src="userpage.js"></script>
+    </div>
+    <!-- Where you've been end-->
+    <!-- Check this out begin-->
+    <div class="jumbotron">
+        <h1>Check out this place too!</h1>
+        <ul class="inline">
+            <input type="text" id="tovisit" readonly>
+        </ul>
+        <script src="checkout.js"></script>
+    </div>
+    <!-- Check this out end-->
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap.min.js"></script>
+</body>
+</html>
